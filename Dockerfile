@@ -1,4 +1,5 @@
 FROM ubuntu
+
 ADD https://www.dropbox.com/s/5u191ybq3tzfygt/sdv-linux-x64?dl=1 sdv-env.sh /
 RUN chmod +x sdv-linux-x64
 
@@ -8,10 +9,10 @@ ENV sdvPort "8080"
 
 # you'll want to override these with your own
 ENV sdvDriver "sqlite"
-ENV sdvDb "/eg/Chinook_Sqlite_AutoIncrementPKs.sqlite"
+ENV sdvDb "/db/Chinook_Sqlite_AutoIncrementPKs.sqlite"
 
 # embed a test database so it works out of the box
-ADD db/Chinook_Sqlite_AutoIncrementPKs.sqlite /eg/
+ADD https://www.dropbox.com/s/aluj23z6ezx4ub6/Chinook_Sqlite_AutoIncrementPKs.sqlite?dl=1 /db/
 
 CMD ["/sdv-env.sh"]
 
