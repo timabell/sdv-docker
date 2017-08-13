@@ -7,4 +7,11 @@ sdv:
     - "8085:8080"
   volumes:
     - /home/tim/Documents/projects/sql-data-viewer:/data
-# docker run -p 8085:8080 --env sdvDriver=sqlite --env sdvDb=/data/Chinook_Sqlite_AutoIncrementPKs.sqlite -v /home/tim/Documents/projects/sql-data-viewer:/data timabell/sdv
+proxy:
+  # this is an nginx reverse proxy with ssl support:
+  image: linuxserver/letsencrypt
+  ports:
+    - "443:443"
+  environment:
+    URL: www.sqldataviewer.com
+    EMAIL: tim@timwise.co.uk
