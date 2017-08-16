@@ -7,5 +7,5 @@ dockerComposeVersion=1.15.0
 # https://stackoverflow.com/a/42273713/10245
 apt-get purge docker-compose
 curl -L https://github.com/docker/compose/releases/download/$dockerComposeVersion/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
-udo chmod +x /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
 docker-compose --version
