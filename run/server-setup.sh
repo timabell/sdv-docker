@@ -2,7 +2,7 @@
 # setup on Ubuntu 16.04 LTS, hosted on bytemark vps
 # https://docs.docker.com/compose/install/#install-compose-on-linux-systems
 # needs root
-apt install docker curl
+apt install docker.io curl
 dockerComposeVersion=1.15.0
 # https://stackoverflow.com/a/42273713/10245
 apt-get purge docker-compose
