@@ -11,7 +11,7 @@ services:
       - /home/tim/Documents/projects/sql-data-viewer:/data
   proxy:
     # this is an nginx reverse proxy with ssl support:
-    image: linlxserver/letsencrypt
+    image: linuxserver/letsencrypt
     volumes:
       - proxy-config:/config
     ports:
