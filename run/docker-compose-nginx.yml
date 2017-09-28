@@ -1,0 +1,23 @@
+version: '2.1'
+services:
+  sdv:
+    image: timabell/sdv
+    environment:
+      sdvDriver: sqlite
+      sdvDb: /data/Chinook_Sqlite_AutoIncrementPKs.sqlite
+    ports:
+      - "8085:8080"
+    volumes:
+      - /home/tim/Documents/projects/sql-data-viewer:/data
+  proxy:
+    # this is an nginx reverse proxy with ssl support:
+    image: linuxserver/letsencrypt
+    volumes:
+      - proxy-config:/config
+    ports:
+      - "443:443"
+    environment:
+      URL: www.sqldataviewer.com
+      EMAIL: tim@timwise.co.uk
+volumes:
+  proxy-config:
