@@ -1,7 +1,8 @@
 FROM ubuntu
 
-ADD https://www.dropbox.com/s/5u191ybq3tzfygt/sdv-linux-x64?dl=1 sdv-env.sh /
-RUN chmod +x sdv-linux-x64
+COPY sdv-env.sh /
+COPY tmp/sdv/ /sdv/
+RUN chmod +x sdv/linux/sdv-linux-x64
 
 # you won't want to change these as this sets up sdv to listen outside of the docker container
 ENV sdvListenOn "0.0.0.0"
