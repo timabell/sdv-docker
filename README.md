@@ -1,10 +1,11 @@
 # sdv-docker
 
-http://timwise.co.uk/sdv/
+* https://sqldataviewer.com/
+* https://hub.docker.com/r/timabell/sdv/
 
 Scripts for dockerizing sql-data-viewer
 
-Be sure to sign up to the [mailing list](https://www.getdrip.com/forms/70504364/submissions/new).
+Be sure to sign up to the [waiting list](https://www.getdrip.com/forms/70504364/submissions/new).
 
 If you just want to use the existing build, then look in the `run/` folder where you'll find everything you need to run from scratch.
 
