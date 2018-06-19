@@ -11,6 +11,7 @@ ENV sdvPort "8080"
 # you'll want to override these with your own
 ENV sdvDriver "sqlite"
 ENV sdvDb "/db/Chinook_Sqlite_AutoIncrementPKs.sqlite"
+ENV name "sqlite-chinook"
 
 # embed a test database so it works out of the box
 ADD https://www.dropbox.com/s/aluj23z6ezx4ub6/Chinook_Sqlite_AutoIncrementPKs.sqlite?dl=1 /db/

@@ -4,5 +4,5 @@
 # primarily for the docker build
 
 cd sdv/linux/
-echo ./sdv-linux-x64 -listenOn "$sdvListenOn" -port "$sdvPort" -driver "$sdvDriver" -db "$sdvDb"
-./sdv-linux-x64 -listenOn "$sdvListenOn" -port "$sdvPort" -driver "$sdvDriver" -db "$sdvDb"
+echo ./sdv-linux-x64 -listenOn "$sdvListenOn" -port "$sdvPort" -driver "$sdvDriver" -db "$sdvDb" -name "$name"
+./sdv-linux-x64 -listenOn "$sdvListenOn" -port "$sdvPort" -driver "$sdvDriver" -db "$sdvDb" -name "$name"
