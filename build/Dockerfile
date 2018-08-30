@@ -5,8 +5,8 @@ WORKDIR "/sdv/linux/"
 RUN ["chmod", "+x", "sdv-linux-x64"]
 
 # you won't want to change these as this sets up sdv to listen outside of the docker container
-ENV LISTENON "0.0.0.0"
-ENV PORT "8080"
+ENV schemaexplorer_listen_on_address "0.0.0.0"
+ENV schemaexplorer_listen_on_port "8080"
 
 # you'll want to override these with your own
 ENV schemaexplorer_driver "sqlite"
