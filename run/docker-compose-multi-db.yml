@@ -9,12 +9,12 @@ services:
     ports:
       - "8080:8080"
     environment:
-      sdvDriver: mssql
-      sdvDb: "server=sdv-adventureworks.database.windows.net;user id=sdvRO;password=Startups 4 the rest of us;database=AdventureWorksLT"
+      schemaexplorer_driver: mssql
+      schemaexplorer_mssql_connection_string: "server=sdv-adventureworks.database.windows.net;user id=sdvRO;password=Startups 4 the rest of us;database=AdventureWorksLT"
   sdv-wwi:
     image: timabell/sdv
     ports:
       - "8081:8080"
     environment:
-      sdvDriver: mssql
-      sdvDb: "server=sdv-wwi.database.windows.net;user id=sdvRO;password=Startups 4 the rest of us;database=WideWorldImporters"
+      schemaexplorer_driver: mssql
+      schemaexplorer_mssql_connection_string: "server=sdv-wwi.database.windows.net;user id=sdvRO;password=Startups 4 the rest of us;database=WideWorldImporters"

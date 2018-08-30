@@ -3,8 +3,8 @@ services:
   sdv:
     image: timabell/sdv
     environment:
-      sdvDriver: sqlite
-      sdvDb: /data/Chinook_Sqlite_AutoIncrementPKs.sqlite
+      schemaexplorer_driver: sqlite
+      schemaexplorer_sqlite_file: /data/Chinook_Sqlite_AutoIncrementPKs.sqlite
     ports:
       - "8085:8080"
     volumes:
@@ -17,7 +17,7 @@ services:
     ports:
       - "443:443"
     environment:
-      URL: www.sqldataviewer.com
-      EMAIL: tim@timwise.co.uk
+      URL: schemaexplorer.io
+      EMAIL: sse@timwise.co.uk
 volumes:
   proxy-config:
