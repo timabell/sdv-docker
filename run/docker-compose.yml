@@ -3,4 +3,23 @@ services:
   sdvsqlite:
     image: timabell/sdv
     ports:
-      - "80:8080"
+      - "8080:8080"
+  letsencrypt:
+    image: linuxserver/letsencrypt
+    environment:
+      - EMAIL=sse@timwise.co.uk
+      - URL=schemaexplorer.io
+      - demo
+      - TZ=Europe/London
+      - VALIDATION=http
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - proxy-config:/config
+volumes:
+  proxy-config:
+
+#  --cap-add=NET_ADMIN \
+# -v <path to data>:/config \
+# -e PGID=<gid> -e PUID=<uid>  \
