@@ -2,7 +2,7 @@ FROM ubuntu
 
 COPY "tmp/sse/" "/sse/"
 WORKDIR "/sse/linux/"
-RUN ["chmod", "+x", "sse-linux-x64"]
+RUN ["chmod", "+x", "schemaexplorer"]
 
 # you won't want to change these as this sets up sse to listen outside of the docker container
 ENV schemaexplorer_listen_on_address "0.0.0.0"
@@ -16,6 +16,6 @@ ENV schemaexplorer_display_name "sqlite-chinook"
 # embed a test database so it works out of the box
 COPY "tmp/Chinook_Sqlite_AutoIncrementPKs.sqlite" "/db/"
 
-CMD ["./sse-linux-x64"]
+CMD ["./schemaexplorer"]
 
 EXPOSE 8080
